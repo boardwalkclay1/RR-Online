@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>RR Online – Direct-to-Fan Royalty Runner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="stylesheet" href="/assets/css/rr-style.css" />
+</head>
+<body class="rr-page rr-index">
+  <div class="rr-overlay">
+    <div class="rr-shell">
+      <header class="rr-header">
+        <div class="rr-logo">RR <span>Online</span></div>
+        <nav class="rr-nav">
+          <a href="/pages/marketplace.html">Marketplace</a>
+          <a href="/pages/artist-dashboard.html">Artist</a>
+          <a href="/pages/library.html">My Library</a>
+          <a href="/pages/login.html">Log in</a>
+          <a href="/pages/signup.html">Sign up</a>
+        </nav>
+      </header>
+
+      <main class="rr-grid two">
+        <section class="rr-panel">
+          <h1 class="rr-hero-title">Keep ninety. Own everything.</h1>
+          <p class="rr-hero-sub">
+            RR Online is your direct-to-fan command center. Upload your music, set your price,
+            and keep 90% of every sale.
+          </p>
+          <div class="rr-pill-row">
+            <div class="rr-pill">Artists 90% • Platform 10%</div>
+            <div class="rr-pill">Direct-to-fan</div>
+            <div class="rr-pill">Digital goods only</div>
+          </div>
+          <div class="rr-actions">
+            <button class="rr-btn" id="rr-get-started">I’m an artist</button>
+            <button class="rr-btn secondary" id="rr-browse-marketplace">Browse marketplace</button>
+          </div>
+        </section>
+
+        <aside class="rr-panel">
+          <h2 class="rr-hero-sub" style="text-transform: uppercase; letter-spacing: 0.12em;">
+            Snapshot
+          </h2>
+          <ul style="list-style:none; padding:0; margin:0; font-size:0.85rem; color:var(--rr-text-muted);">
+            <li>• Upload tracks, stems, and packs</li>
+            <li>• Fans buy once, download forever</li>
+            <li>• Stripe Connect payouts to artists</li>
+            <li>• RR takes 10% platform fee</li>
+          </ul>
+        </aside>
+      </main>
+
+      <footer class="rr-footer">
+        RR Online · Royalty Runner · 90% to artists · 10% to the rails
+      </footer>
+    </div>
+  </div>
+
+  <script src="/assets/js/index.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/sw.js");
+    }
+  </script>
+</body>
+</html>

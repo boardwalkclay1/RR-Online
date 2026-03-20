@@ -1,0 +1,15 @@
+{
+  "name": "RR Online",
+  "short_name": "RR Online",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#c8752b",
+  "icons": [
+    {
+      "src": "/assets/img/rr-index.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

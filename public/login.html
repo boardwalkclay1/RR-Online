@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RR Online — Log in</title>
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="stylesheet" href="/assets/css/rr-style.css" />
+  <meta name="theme-color" content="#c8752b" />
+</head>
+<body class="rr-page rr-login">
+  <div class="rr-overlay">
+    <div class="rr-shell" role="main">
+      <header class="rr-header" role="banner">
+        <div class="rr-logo" aria-hidden="true">RR <span>Online</span></div>
+        <nav class="rr-nav" aria-label="Primary">
+          <a href="/index.html">Home</a>
+          <a href="/pages/signup.html">Sign up</a>
+          <a href="/pages/marketplace.html">Marketplace</a>
+        </nav>
+      </header>
+
+      <main class="rr-panel" aria-labelledby="login-title">
+        <h1 id="login-title" class="rr-hero-title">Log in</h1>
+        <p class="rr-hero-sub">Access your artist dashboard, upload releases, or manage purchases.</p>
+
+        <form id="rr-login-form" class="rr-form" autocomplete="on" novalidate>
+          <div class="rr-field">
+            <label for="rr-login-email">Email</label>
+            <input id="rr-login-email" name="email" type="email" inputmode="email" autocomplete="email" required
+                   placeholder="you@domain.com" />
+          </div>
+
+          <div class="rr-field">
+            <label for="rr-login-password">Password</label>
+            <input id="rr-login-password" name="password" type="password" autocomplete="current-password" required
+                   placeholder="••••••••" />
+          </div>
+
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:12px;">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <input id="rr-remember" name="remember" type="checkbox" />
+              <label for="rr-remember" style="font-size:0.85rem; color:var(--rr-text-muted);">Remember me</label>
+            </div>
+            <a href="/pages/signup.html" style="font-size:0.85rem; color:var(--rr-text-muted); text-decoration:none;">
+              Create account
+            </a>
+          </div>
+
+          <div style="display:flex; gap:10px; margin-top:12px;">
+            <button class="rr-btn" type="submit">Log in</button>
+            <button class="rr-btn secondary" type="button" id="rr-login-demo">Demo</button>
+          </div>
+
+          <div id="rr-login-feedback" aria-live="polite" style="margin-top:10px; color:var(--rr-text-muted); font-size:0.9rem;"></div>
+        </form>
+
+        <hr style="border:none; height:1px; background:rgba(200,117,43,0.12); margin:18px 0;" />
+
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <button class="rr-btn secondary" id="rr-login-google" type="button">Continue with Google</button>
+          <button class="rr-btn secondary" id="rr-login-apple" type="button">Continue with Apple</button>
+        </div>
+      </main>
+
+      <footer class="rr-footer" role="contentinfo">
+        RR Online · Keep 90% · Platform 10%
+      </footer>
+    </div>
+  </div>
+
+  <script type="module" src="/assets/js/auth.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').catch(()=>{ /* silent */ });
+    }
+  </script>
+</body>
+</html>

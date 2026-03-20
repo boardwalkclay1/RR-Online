@@ -232,3 +232,26 @@ body.rr-page {
   font-size: 0.75rem;
   color: var(--rr-text-muted);
 }
+body.rr-index {
+  background-image: url("/assets/img/rr-index.png");
+}
+
+body.rr-marketplace {
+  background-image: url("/assets/img/rr-marketplace.png");
+}
+
+body.rr-artist-dashboard {
+  background-image: url("/assets/img/rr-artist-dashboard.png");
+}
+
+body.rr-upload {
+  background-image: url("/assets/img/rr-upload.png");
+}
+
+body.rr-library {
+  background-image: url("/assets/img/rr-library.png");
+}
+
+body.rr-admin {
+  background-image: url("/assets/img/rr-admin.png");
+}

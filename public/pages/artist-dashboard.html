@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>RR Online – Artist Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/css/rr-style.css" />
+</head>
+<body class="rr-page rr-artist-dashboard">
+  <div class="rr-overlay">
+    <div class="rr-shell">
+      <header class="rr-header">
+        <div class="rr-logo">RR <span>Online</span></div>
+        <nav class="rr-nav">
+          <a href="/index.html">Home</a>
+          <a href="/pages/marketplace.html">Marketplace</a>
+          <a href="/pages/upload.html">Upload</a>
+          <a href="/pages/library.html">My Library</a>
+        </nav>
+      </header>
+
+      <main class="rr-grid two">
+        <section class="rr-panel">
+          <h1 class="rr-hero-title">Artist dashboard</h1>
+          <p class="rr-hero-sub">
+            See your sales, uploads, and payouts. RR keeps 10%, you keep the rest.
+          </p>
+          <div id="rr-artist-stats"></div>
+        </section>
+
+        <aside class="rr-panel">
+          <h2 class="rr-hero-sub" style="text-transform:uppercase; letter-spacing:0.12em;">
+            Quick actions
+          </h2>
+          <div class="rr-actions">
+            <button class="rr-btn" onclick="window.location.href='/pages/upload.html'">
+              Upload new release
+            </button>
+            <button class="rr-btn secondary">
+              Connect payouts
+            </button>
+          </div>
+        </aside>
+      </main>
+
+      <footer class="rr-footer">
+        RR Online · Artist dashboard
+      </footer>
+    </div>
+  </div>
+
+  <script src="/assets/js/artist-dashboard.js"></script>
+</body>
+</html>

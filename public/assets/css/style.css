@@ -1,0 +1,234 @@
+:root {
+  --rr-bg: #050509;
+  --rr-panel: #0b0f18;
+  --rr-copper: #c8752b;
+  --rr-copper-soft: #e0a16a;
+  --rr-text-main: #f5f1ea;
+  --rr-text-muted: #b9a89a;
+  --rr-accent: #35ff9b;
+  --rr-radius: 14px;
+  --rr-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
+  --rr-font-display: "Playfair Display", "Georgia", serif;
+  --rr-font-body: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: var(--rr-bg);
+  color: var(--rr-text-main);
+  font-family: var(--rr-font-body);
+}
+
+body.rr-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.rr-overlay {
+  flex: 1;
+  background: radial-gradient(circle at top, rgba(200, 117, 43, 0.18), transparent 55%),
+              radial-gradient(circle at bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.98));
+  display: flex;
+  flex-direction: column;
+}
+
+.rr-shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Header */
+
+.rr-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.rr-logo {
+  font-family: var(--rr-font-display);
+  font-size: 1.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--rr-copper);
+}
+
+.rr-logo span {
+  font-style: italic;
+  font-weight: 600;
+}
+
+.rr-nav {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.rr-nav a {
+  text-decoration: none;
+  color: var(--rr-text-muted);
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(200, 117, 43, 0.35);
+  background: rgba(5, 5, 9, 0.7);
+  backdrop-filter: blur(10px);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all 0.18s ease-out;
+}
+
+.rr-nav a:hover {
+  color: var(--rr-text-main);
+  border-color: var(--rr-copper-soft);
+  box-shadow: 0 0 18px rgba(200, 117, 43, 0.45);
+}
+
+/* Hero / panels */
+
+.rr-panel {
+  background: linear-gradient(135deg, rgba(11, 15, 24, 0.96), rgba(5, 5, 9, 0.98));
+  border-radius: var(--rr-radius);
+  box-shadow: var(--rr-shadow);
+  border: 1px solid rgba(200, 117, 43, 0.35);
+  padding: 24px 22px;
+}
+
+.rr-hero-title {
+  font-family: var(--rr-font-display);
+  font-size: 2.4rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+  color: var(--rr-copper-soft);
+}
+
+.rr-hero-sub {
+  margin: 0 0 18px;
+  color: var(--rr-text-muted);
+  max-width: 520px;
+}
+
+.rr-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.rr-pill {
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(53, 255, 155, 0.4);
+  color: var(--rr-accent);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Buttons */
+
+.rr-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.rr-btn {
+  border-radius: 999px;
+  padding: 10px 18px;
+  border: 1px solid rgba(200, 117, 43, 0.6);
+  background: radial-gradient(circle at top left, rgba(200, 117, 43, 0.4), rgba(5, 5, 9, 0.95));
+  color: var(--rr-text-main);
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.18s ease-out;
+}
+
+.rr-btn.secondary {
+  background: rgba(5, 5, 9, 0.9);
+  border-color: rgba(200, 117, 43, 0.4);
+  color: var(--rr-text-muted);
+}
+
+.rr-btn:hover {
+  box-shadow: 0 0 22px rgba(200, 117, 43, 0.6);
+  transform: translateY(-1px);
+}
+
+/* Simple grids */
+
+.rr-grid {
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .rr-grid.two {
+    grid-template-columns: 2fr 1.4fr;
+  }
+}
+
+/* Forms */
+
+.rr-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rr-field label {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--rr-text-muted);
+  margin-bottom: 4px;
+}
+
+.rr-field input,
+.rr-field textarea,
+.rr-field select {
+  width: 100%;
+  padding: 9px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(200, 117, 43, 0.4);
+  background: rgba(5, 5, 9, 0.9);
+  color: var(--rr-text-main);
+  font-family: var(--rr-font-body);
+  font-size: 0.9rem;
+}
+
+.rr-field textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* Footer */
+
+.rr-footer {
+  padding: 12px 16px 18px;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--rr-text-muted);
+}

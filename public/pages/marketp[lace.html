@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>RR Online – Marketplace</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/css/rr-style.css" />
+</head>
+<body class="rr-page rr-marketplace">
+  <div class="rr-overlay">
+    <div class="rr-shell">
+      <header class="rr-header">
+        <div class="rr-logo">RR <span>Online</span></div>
+        <nav class="rr-nav">
+          <a href="/index.html">Home</a>
+          <a href="/pages/artist-dashboard.html">Artist</a>
+          <a href="/pages/library.html">My Library</a>
+          <a href="/pages/login.html">Log in</a>
+        </nav>
+      </header>
+
+      <main class="rr-panel">
+        <h1 class="rr-hero-title">Marketplace</h1>
+        <p class="rr-hero-sub">
+          Browse tracks, beats, and packs. Every purchase pays the artist directly.
+        </p>
+
+        <div class="rr-form" id="rr-marketplace-filters">
+          <div class="rr-field">
+            <label for="rr-search">Search</label>
+            <input id="rr-search" type="text" placeholder="Title, artist, tag…" />
+          </div>
+        </div>
+
+        <section class="rr-grid" id="rr-marketplace-list"></section>
+      </main>
+
+      <footer class="rr-footer">
+        RR Online · Marketplace
+      </footer>
+    </div>
+  </div>
+
+  <script src="/assets/js/marketplace.js"></script>
+</body>
+</html>

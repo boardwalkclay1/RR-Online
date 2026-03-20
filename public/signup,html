@@ -1,0 +1,51 @@
+<!-- signup.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>RR Online – Sign up</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/css/rr-style.css" />
+</head>
+<body class="rr-page rr-index">
+  <div class="rr-overlay">
+    <div class="rr-shell">
+      <header class="rr-header">
+        <div class="rr-logo">RR <span>Online</span></div>
+        <nav class="rr-nav">
+          <a href="/index.html">Home</a>
+          <a href="/pages/login.html">Log in</a>
+        </nav>
+      </header>
+
+      <main class="rr-panel">
+        <h1 class="rr-hero-title">Create account</h1>
+        <form class="rr-form" id="rr-signup-form">
+          <div class="rr-field">
+            <label for="rr-signup-email">Email</label>
+            <input id="rr-signup-email" type="email" required />
+          </div>
+          <div class="rr-field">
+            <label for="rr-signup-password">Password</label>
+            <input id="rr-signup-password" type="password" required />
+          </div>
+          <div class="rr-field">
+            <label for="rr-signup-role">I am</label>
+            <select id="rr-signup-role">
+              <option value="fan">A fan</option>
+              <option value="artist">An artist</option>
+            </select>
+          </div>
+          <button class="rr-btn" type="submit">Create account</button>
+        </form>
+      </main>
+
+      <footer class="rr-footer">
+        RR Online · Sign up
+      </footer>
+    </div>
+  </div>
+
+  <script src="/assets/js/auth.js"></script>
+</body>
+</html>
